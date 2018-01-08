@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf100
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 makembindex -input seqs.fna.nsi -iformat blastdb -legacy false -output test\
+  177  makembindex -input seqs.fna -iformat blastdb -legacy false -output test\
+  178  cp seqs.fna.nsi seqs.map\
+  179  ls  -ltr\
+  180  makembindex -input seqs.map -iformat blastdb -legacy false -output test\
+  181  makembindex -input seqs.fna -iformat blastdb -legacy false -output test\
+  182  ls -ltr\
+  183  blastn -db seqs.fna -query test.fna -use_index true \'96out OUTPUT\
+  184  blastn -db seqs.fna -query test.fna -use_index true \
+  185  blastn -db seqs.fna -query test.fna -use_index true -index test.00.idx\
+  186  blastn -help\
+  187  blastn -db seqs.fna -query test.fna -use_index true -index_name test.00.idx\
+  188  blastn -db seqs.fna -query test.fna -use_index true -index_name test.00.idx\
+  189  blastn -db seqs.fna -query test.fna -index_name test.00.idx -use_index true\
+}
